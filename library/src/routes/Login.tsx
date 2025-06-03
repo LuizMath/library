@@ -39,9 +39,9 @@ const Login = (): JSX.Element => {
               placeholder="Senha"
               className="input-form"
             />
-            <label className="grid grid-cols-[16px_95px] self-start content-center">
-              <input type="checkbox" />
-              <span className="justify-self-end">Lembrar-me</span>
+            <label className="flex items-center justify-center gap-2">
+              <input type="checkbox" className="w-[20px] h-[20px]" />
+              <span>Lembrar-me</span>
             </label>
             <button
               type="submit"
