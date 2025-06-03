@@ -17,3 +17,11 @@
 @utility btn-header {
   @apply bg-[#03151e] text-white rounded-[200px] w-[165px] h-[35px];
 }
+
+@utility btn-form {
+  @apply bg-[#4bc1d2] text-white p-[20px] rounded-[8px] w-[370px] max-[500px]:w-[100%] h-[45px] grid grid-cols-1 content-center cursor-pointer;
+}
+
+@utility label-form {
+  @apply flex items-start justify-center flex-col;
+}

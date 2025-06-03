@@ -43,10 +43,7 @@ const Login = (): JSX.Element => {
               <input type="checkbox" className="w-[20px] h-[20px]" />
               <span>Lembrar-me</span>
             </label>
-            <button
-              type="submit"
-              className="bg-[#4bc1d2] text-white p-[20px] rounded-[8px] w-[370px] max-[500px]:w-[100%] h-[45px] grid grid-cols-1 content-center cursor-pointer"
-            >
+            <button type="submit" className="btn-form">
               Iniciar Sessão
             </button>
           </form>
