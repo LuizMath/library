@@ -26,7 +26,14 @@ const Header = (): JSX.Element => {
           <img src={sapiensHeader} alt="logo" />
         </div>
         <div className="w-[50%] max-[1500px]:w-[60%] max-[1000px]:w-[70%] max-[850px]:hidden flex items-center justify-between">
-          <Link to="/Contact">Contate-nos</Link>
+          <button
+            onClick={() => {
+              closeSideBar();
+              navigate("/Contact");
+            }}
+          >
+            Contate-nos
+          </button>
           <button
             onClick={() => {
               closeSideBar();
@@ -60,7 +67,14 @@ const Header = (): JSX.Element => {
             className="transform-[scale(2)]"
           />
         </span>
-        <Link to="/Contact">Contate-nos</Link>
+        <button
+          onClick={() => {
+            closeSideBar();
+            navigate("/Contact");
+          }}
+        >
+          Contate-nos
+        </button>
         <button
           onClick={() => {
             closeSideBar();
