@@ -25,7 +25,7 @@ const Login = (): JSX.Element => {
           </div>
           <form
             onSubmit={handleSubmit(onSubmit)}
-            className="flex items-start justify-center flex-col gap-6 max-[500px]:w-[90%] max-[500px]:items-center"
+            className="flex items-start justify-center flex-col gap-6 max-[500px]:w-[90%]"
           >
             <input
               type="text"

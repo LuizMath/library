@@ -18,18 +18,18 @@ const Register = (): JSX.Element => {
   return (
     <section className="w-full min-h-[calc(100%-100px)] max-h-auto flex items-center justify-start gap-[50px] [@media(min-height:1030px)]:justify-center flex-col">
       <div className="w-[90%] flex items-center justify-center flex-col mt-[50px]">
-        <span className="text-[72px] color-[#03151e] font-[900]">
+        <span className="text-[72px] color-[#03151e] font-[900] text-center">
           Cadastre-se na SAPIENS
         </span>
-        <p className="text-[28.8px] font-[300]">
+        <p className="text-[28.8px] font-[300] text-center">
           O catálogo da sua biblioteca está disponível em qualquer lugar, a
           qualquer hora.
         </p>
       </div>
-      <div className="w-[960px] h-[530px] p-[30px] bg-white shadow-[0px_5px_20px_-8px_rgba(27,84,112,1)] mt-[50px] mb-[100px]">
+      <div className="w-[960px] max-[1000px]:w-[90%] h-[530px] p-[30px] bg-white shadow-[0px_5px_20px_-8px_rgba(27,84,112,1)] mt-[50px] mb-[100px]">
         <section className="w-full h-full border-t-1 border-t-[#c9d6df] flex items-center justify-between flex-col h-full mt-[15px]">
           <div className="w-[95%] mt-[30px]">
-            <span className="font-[700] text-[28.8px]">
+            <span className="font-[700] text-[28.8px] max-[407px]:text-[24px] max-[350px]:text-[22px]">
               Informações da conta:
             </span>
           </div>
@@ -88,7 +88,10 @@ const Register = (): JSX.Element => {
                 </select>
               </label>
             </section>
-            <button type="submit" className="btn-form mt-[40px] w-[265px]">
+            <button
+              type="submit"
+              className="btn-form mt-[40px] w-[265px] max-[720px]:w-[calc(50%-10px)] max-[575px]:w-[100%]"
+            >
               Iniciar minha Biblioteca
             </button>
           </form>
