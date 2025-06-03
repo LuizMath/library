@@ -11,34 +11,48 @@ const Register = (): JSX.Element => {
           qualquer hora.
         </p>
       </div>
-      <div className="w-[960px] h-[530px] p-[30px] bg-white shadow-[0px_5px_20px_-8px_rgba(27,84,112,1)] mt-[50px] mb-[50px]">
+      <div className="w-[960px] h-[530px] p-[30px] bg-white shadow-[0px_5px_20px_-8px_rgba(27,84,112,1)] mt-[50px] mb-[100px]">
         <section className="w-full h-full border-t-1 border-t-[#c9d6df] flex items-center justify-between flex-col h-full mt-[15px]">
           <div className="w-[95%] mt-[30px]">
             <span className="font-[700] text-[28.8px]">
               Informações da conta:
             </span>
           </div>
-          <form className="w-[95%] h-auto flex justify-between flex-col mb-[30px]">
-            <section className="w-full grid grid-cols-2 gap-y-[30px]">
+          <form className="w-[95%] h-auto flex justify-between flex-col mb-[20px]">
+            <section className="w-full grid grid-cols-2 gap-y-[20px]">
               <label className="label-form">
                 <span>Primeiro Nome</span>
-                <input className="input-form" placeholder="Primeiro Nome" />
+                <input
+                  className="input-form w-[95%]"
+                  placeholder="Primeiro Nome"
+                />
               </label>
               <label className="label-form">
                 <span>Último Nome</span>
-                <input className="input-form" placeholder="Último Nome" />
+                <input
+                  className="input-form w-[95%]"
+                  placeholder="Último Nome"
+                />
               </label>
               <label className="label-form">
                 <span>E-mail</span>
-                <input className="input-form" placeholder="E-mail" />
+                <input className="input-form w-[95%]" placeholder="E-mail" />
               </label>
               <label className="label-form">
                 <span>Senha</span>
-                <input className="input-form" placeholder="Senha" />
+                <input className="input-form w-[95%]" placeholder="Senha" />
               </label>
               <label className="label-form">
                 <span>País</span>
-                <select defaultValue={"Brasil (Padrão)"}></select>
+                <select
+                  defaultValue={"DEFAULT"}
+                  className="text-black cursor-pointer input-form w-[95%]"
+                >
+                  <option value="DEFAULT" disabled>
+                    País
+                  </option>
+                  <option value="Brasil">Brasil</option>
+                </select>
               </label>
             </section>
             <button type="submit" className="btn-form mt-[40px] w-[265px]">
