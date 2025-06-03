@@ -12,7 +12,7 @@ const Login = (): JSX.Element => {
   } = useForm<loginSchemaData>({
     resolver: zodResolver(loginSchema),
   });
-  const onSubmit = () => {};
+  const onSubmit = (data: loginSchemaData) => {};
   return (
     <section className="w-full h-[calc(100%-100px)] flex items-center justify-center">
       <div className="w-[460px] h-[435px] max-[500px]:h-[460px] max-[500px]:w-[90%] max-[500px]:flex max-[500px]:items-center max-[500px]:justify-center max-[500px]:flex-col">
@@ -40,7 +40,11 @@ const Login = (): JSX.Element => {
               className="input-form"
             />
             <label className="flex items-center justify-center gap-2">
-              <input type="checkbox" className="w-[20px] h-[20px]" />
+              <input
+                type="checkbox"
+                className="w-[20px] h-[20px]"
+                {...register("rememberData")}
+              />
               <span>Lembrar-me</span>
             </label>
             <button type="submit" className="btn-form">

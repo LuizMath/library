@@ -1,5 +1,20 @@
 import type { JSX } from "react";
+import {
+  registerSchema,
+  type registerSchemaData,
+} from "../schemas/registerShema";
+import { zodResolver } from "@hookform/resolvers/zod";
+import { useForm } from "react-hook-form";
+
 const Register = (): JSX.Element => {
+  const {
+    register,
+    handleSubmit,
+    formState: { errors },
+  } = useForm<registerSchemaData>({
+    resolver: zodResolver(registerSchema),
+  });
+  const onSubmit = (data: registerSchemaData) => {};
   return (
     <section className="w-full min-h-[calc(100%-100px)] max-h-auto flex items-center justify-start gap-[50px] [@media(min-height:1030px)]:justify-center flex-col">
       <div className="w-[90%] flex items-center justify-center flex-col mt-[50px]">
@@ -18,11 +33,16 @@ const Register = (): JSX.Element => {
               Informações da conta:
             </span>
           </div>
-          <form className="w-[95%] h-auto flex justify-between flex-col mb-[20px]">
+          <form
+            onSubmit={handleSubmit(onSubmit)}
+            className="w-[95%] h-auto flex justify-between flex-col mb-[20px]"
+          >
             <section className="w-full grid grid-cols-2 gap-y-[20px]">
               <label className="label-form">
                 <span>Primeiro Nome</span>
                 <input
+                  {...register("name")}
+                  type="text"
                   className="input-form w-[95%]"
                   placeholder="Primeiro Nome"
                 />
@@ -30,22 +50,35 @@ const Register = (): JSX.Element => {
               <label className="label-form">
                 <span>Último Nome</span>
                 <input
+                  {...register("lastName")}
+                  type="text"
                   className="input-form w-[95%]"
                   placeholder="Último Nome"
                 />
               </label>
               <label className="label-form">
                 <span>E-mail</span>
-                <input className="input-form w-[95%]" placeholder="E-mail" />
+                <input
+                  {...register("email")}
+                  type="email"
+                  className="input-form w-[95%]"
+                  placeholder="E-mail"
+                />
               </label>
               <label className="label-form">
                 <span>Senha</span>
-                <input className="input-form w-[95%]" placeholder="Senha" />
+                <input
+                  {...register("password")}
+                  type="password"
+                  className="input-form w-[95%]"
+                  placeholder="Senha"
+                />
               </label>
               <label className="label-form">
                 <span>País</span>
                 <select
                   defaultValue={"DEFAULT"}
+                  {...register("country")}
                   className="text-black cursor-pointer input-form w-[95%]"
                 >
                   <option value="DEFAULT" disabled>
