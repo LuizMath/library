@@ -27,6 +27,7 @@ const Header = (): JSX.Element => {
         </div>
         <div className="w-[50%] max-[1500px]:w-[60%] max-[1000px]:w-[70%] max-[850px]:hidden flex items-center justify-between">
           <button
+            className="cursor-pointer"
             onClick={() => {
               closeSideBar();
               navigate("/Contact");
@@ -54,7 +55,7 @@ const Header = (): JSX.Element => {
           </button>
         </div>
         <div
-          className="w-auto hidden max-[850px]:flex max-[850px]:items-center max-[850px]:justify-end"
+          className="w-auto hidden max-[850px]:flex max-[850px]:items-center max-[850px]:justify-end cursor-pointer"
           onClick={() => openSideBar()}
         >
           <RxHamburgerMenu className="transform-[scale(2)]" />
@@ -68,6 +69,7 @@ const Header = (): JSX.Element => {
           />
         </span>
         <button
+          className="cursor-pointer"
           onClick={() => {
             closeSideBar();
             navigate("/Contact");

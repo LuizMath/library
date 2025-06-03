@@ -15,7 +15,7 @@
 }
 
 @utility btn-header {
-  @apply bg-[#03151e] text-white rounded-[200px] w-[165px] h-[35px];
+  @apply bg-[#03151e] cursor-pointer text-white rounded-[200px] w-[165px] h-[35px];
 }
 
 @utility btn-form {
