@@ -1,5 +1,28 @@
-const Home = () => {
-  return <div>Home</div>;
+import type { JSX } from "react";
+import { useNavigate } from "react-router-dom";
+
+const Home = (): JSX.Element => {
+  const navigate = useNavigate();
+  return (
+    <section className="w-full min-h-[calc(100%-100px)] max-h-auto flex items-center justify-center flex-col">
+      <div className="w-[90%] flex items-center justify-around flex-col mt-[100px] h-[305px]">
+        <span className="text-[72px] color-[#03151e] font-[900] text-center">
+          Catalogação em Nuvem
+        </span>
+        <p className="text-[28.8px] font-[300] text-center">
+          Sua biblioteca nunca pareceu tão boa. Livros, filmes, músicas e
+          videogames.
+        </p>
+        <button
+          onClick={() => navigate("/Register")}
+          className="btn-form rounded-[200px] w-[160px]"
+        >
+          Começar
+        </button>
+      </div>
+      <section className=" w-full h-[915px] bg-[#4bc1d2]"></section>
+    </section>
+  );
 };
 
 export default Home;
